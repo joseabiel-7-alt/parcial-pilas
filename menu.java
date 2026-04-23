@@ -15,6 +15,7 @@ public class menu {
             System.out.println("3: Historial: ");
             System.out.println("4: Salir");
             int opt = v.ValidarEntero(scanner);
+            
             scanner.nextLine();
             
             switch (opt) {
@@ -40,6 +41,7 @@ public class menu {
                 default:
                     System.out.println("opcion no valida");
                     break;
+                    
             }
 
         }

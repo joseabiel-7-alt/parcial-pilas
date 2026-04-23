@@ -17,10 +17,13 @@ public class metodos {
             System.out.println("Fecha: " );
                 l.setFecha(java.time.LocalDateTime.now());
             System.out.println("Desea ingresar otra pagina? \n1: Si \n2: No");
-            int opt = v.ValidarEntero(sc);
-            if (opt == 2) {
+            int numero = v.ValidarEntero(sc);
+             numero = v.validarrango(1, 2, numero, sc);
+            sc.nextLine();
+            if (numero == 2) {
                 ing = false;
             }
+            
         }
     return p;
     
@@ -38,7 +41,7 @@ public class metodos {
         }
     }
     
-     public void anterior(Stack<objweb> m) {
+     public Stack<objweb> anterior (Stack<objweb> m) {
         if (m.isEmpty()) {
             System.out.println("No hay historial");
         } else {
@@ -51,5 +54,7 @@ public class metodos {
                 System.out.println("No hay más páginas.");
             }
         }
+        return m;
     }
+    
 }
